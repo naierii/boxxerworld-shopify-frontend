@@ -1,0 +1,33 @@
+mutation CreateCustomDesign($data: CustomDesignInput!) {
+  createCustomDesign(data: $data) {
+    data {
+      id
+      attributes {
+        sizing {
+          id
+          shopifyVariantId
+        }
+        parts {
+          id
+          shopifyVariantId
+        }
+        flags {
+          id
+          shopifyVariantId
+        }
+        graphics {
+          id
+          shopifyVariantId
+        }
+        texts {
+          id
+          basePriceVariantId
+          letterPriceVariantId
+          outlinePriceVariantId
+          puffPriceVariantId
+          crystalPriceVariantId
+        }
+      }
+    }
+  }
+}

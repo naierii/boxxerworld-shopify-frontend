@@ -1,0 +1,13 @@
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.fittingOption {
+  margin-bottom: srem.convert(30px);
+}
+
+.fittingButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: srem.convert(15px);
+}

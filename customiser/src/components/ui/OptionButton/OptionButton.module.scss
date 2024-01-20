@@ -1,0 +1,17 @@
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.root {
+  font-family: $displayFont;
+  padding: srem.convert(13px) srem.convert(18px) srem.convert(7px);
+  font-size: srem.convert(20px);
+  border: 1px solid $midGrey;
+  font-weight: 900;
+  color: $grey;
+}
+
+.selected {
+  background-color: $black;
+  color: $white;
+}

@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "e63b1a84-51f7-410f-8ff5-f89663c9df5c": {
+          "type": "customiser",
+          "settings": {
+          }
+        },
+        "ab4370f6-f64b-4dbe-893c-ba168b85cecf": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery and Returns",
+            "icon": "truck",
+            "content": "",
+            "page": "delivery-and-returns"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "e63b1a84-51f7-410f-8ff5-f89663c9df5c",
+        "ab4370f6-f64b-4dbe-893c-ba168b85cecf",
+        "collapsible-row-0"
+      ],
+      "settings": {
+        "media_size": "large"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

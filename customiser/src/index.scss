@@ -1,0 +1,134 @@
+@use './styles/mq-settings';
+@use '~sass-mq/mq';
+@use '~sass-rem' as srem;
+
+@import './styles/variables';
+@import './styles/helpers';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#BoxxerCustomiser {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@for $index from 1 through 6 {
+  h#{$index},
+  .h#{$index} {
+    font-family: $displayFont;
+    font-weight: 900;
+    padding-top: srem.convert(5px);
+    margin-top: srem.convert(-5px);
+    line-height: 1;
+    margin-bottom: 1rem;
+    word-break: break-word;
+    -webkit-text-stroke-width: 0;
+
+    .outlined {
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+    }
+
+    &.text-color-light {
+      color: $white;
+      text-shadow: 0 srem.convert(3px) srem.convert(20px) $black;
+
+      .outlined {
+        -webkit-text-stroke-color: $white;
+      }
+    }
+
+    &.text-color-dark {
+      color: $black;
+
+      .outlined {
+        -webkit-text-stroke-color: $black;
+      }
+    }
+
+    &.text-color-red {
+      color: $red;
+    }
+  }
+}
+
+h1,
+.h1 {
+  @include fluidType(srem.convert(48px), srem.convert(72px));
+}
+
+h2,
+.h2 {
+  @include fluidType(srem.convert(36px), srem.convert(45px));
+}
+
+h3,
+.h3 {
+  font-size: srem.convert(28px);
+}
+
+h4,
+.h4 {
+  font-size: srem.convert(28px);
+}
+
+h5,
+.h5 {
+  font-size: srem.convert(22px);
+}
+
+p {
+  margin-top: 0;
+
+  .text--large & {
+    @include fluidType(srem.convert(18px), srem.convert(22px));
+  }
+}
+
+ul,
+ol {
+  li {
+    color: $darkGrey;
+  }
+}
+
+a {
+  > * + * {
+    text-decoration: none;
+  }
+}
+
+button {
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  appearance: none;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,30 @@
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.variations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: srem.convert(15px);
+}
+
+.unitToggle {
+  display: flex;
+  align-items: center;
+  font-family: $displayFont;
+  font-weight: 900;
+  font-size: srem.convert(20px);
+  column-gap: srem.convert(5px);
+  color: $grey;
+}
+
+.toggleButton {
+  font-family: $displayFont;
+  font-weight: 900;
+  font-size: srem.convert(20px);
+  color: $grey;
+}
+
+.toggleButtonSelected {
+  color: $black;
+}

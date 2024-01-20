@@ -1,0 +1,22 @@
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.root {
+  padding: srem.convert(15px);
+  background-color: $yellow;
+  text-transform: capitalize;
+
+  &__noMaterial {
+    background-color: $darkGrey;
+    color: white;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-family: $displayFont;
+  }
+}
+
+.materialName {
+  font-size: 105%;
+  font-weight: 600;
+}

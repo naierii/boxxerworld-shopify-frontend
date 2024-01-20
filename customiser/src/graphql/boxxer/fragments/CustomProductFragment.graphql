@@ -1,0 +1,15 @@
+fragment CustomProduct on CustomProductEntity {
+  id
+  attributes {
+    name
+    shopifyProductId
+    initPrice
+    initSku
+    options {
+      ...CustomProductOption
+    }
+    parts {
+      ...CustomProductPart
+    }
+  }
+}

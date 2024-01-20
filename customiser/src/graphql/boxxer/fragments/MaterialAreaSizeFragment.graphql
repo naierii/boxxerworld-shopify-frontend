@@ -1,0 +1,8 @@
+fragment MaterialAreaSize on MaterialAreaSizeEntity {
+  id
+  attributes {
+    name
+    priceAdjust
+    sku
+  }
+}

@@ -1,0 +1,86 @@
+@use '~sass-mq/mq' as *;
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 73px auto 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'header'
+    'header-after'
+    'content';
+  background-color: white;
+  max-width: 500px;
+  height: 100%;
+  z-index: 200;
+  bottom: 0;
+  overflow: hidden;
+
+  &.open {
+    grid-template-areas:
+      'content'
+      'content';
+  }
+
+  @include mq($until: tablet) {
+    height: 66%;
+    position: absolute;
+    width: 100%;
+    max-width: none;
+
+    &.open {
+      height: 100px;
+    }
+
+    &.isFullscreen {
+      height: 100%;
+    }
+
+    &.minimized {
+      grid-template-areas: 'header';
+      grid-template-rows: 1fr;
+      height: 100px;
+
+      .actions,
+      .content {
+        display: none;
+      }
+    }
+  }
+}
+
+.headerAfter {
+  grid-area: header-after;
+}
+
+.hasActions {
+  grid-template-rows: 73px auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'header-after'
+    'content'
+    'actions';
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  padding: srem.convert(10px) srem.convert(30px);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  height: calc(100% + 1px);
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.actions {
+  grid-area: actions;
+}

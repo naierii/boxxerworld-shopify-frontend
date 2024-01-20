@@ -1,0 +1,38 @@
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.root {
+}
+
+.dropZone {
+  border: 1px dashed #707070;
+  padding: srem.convert(70px) srem.convert(18px) srem.convert(40px);
+  text-align: center;
+  cursor: pointer;
+
+  svg {
+    width: srem.convert(23px);
+    margin-bottom: srem.convert(25px);
+  }
+
+  h5 {
+    margin: 0;
+    color: $grey;
+  }
+}
+
+.image {
+  margin-bottom: 1rem;
+}
+
+.graphicItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: srem.convert(20px);
+}
+
+.graphicItemImage {
+  width: srem.convert(50px);
+  margin-right: auto;
+}

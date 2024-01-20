@@ -1,0 +1,7 @@
+query GetCustomProductByShopifyId($id: String!) {
+  customProductByShopifyId(id: $id) {
+    data {
+      ...CustomProduct
+    }
+  }
+}

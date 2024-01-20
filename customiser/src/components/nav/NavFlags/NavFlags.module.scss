@@ -1,0 +1,29 @@
+@use '~sass-rem' as srem;
+@import '@styles/variables';
+
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: srem.convert(14px);
+}
+
+.flag {
+  width: calc((100% / 7) - srem.convert(14px) * 6 / 7);
+  padding: srem.convert(5px);
+  background-color: $midGrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.flagItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: srem.convert(20px);
+}
+
+.flagItemImage {
+  width: srem.convert(50px);
+  margin-right: auto;
+}

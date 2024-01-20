@@ -1,0 +1,25 @@
+@use '~sass-rem' as srem;
+
+@import '@styles/variables';
+
+.pillButton {
+  padding: srem.convert(7px) srem.convert(17px);
+  border-radius: 50vw;
+  background-color: $lightGrey;
+  white-space: nowrap;
+  width: fit-content;
+  color: $black;
+}
+
+.pillButtonSelected {
+  background-color: $red;
+  color: $white;
+
+  &.darkGrey {
+    background-color: $darkGrey;
+  }
+
+  &.black {
+    background-color: black;
+  }
+}
